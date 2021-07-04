@@ -6,11 +6,12 @@ A function that will only be called once. This is done using closure concept
 function once(){
     var hasBeenCalled = false;
        function inner(){
-           hasBeenCalled = true;
-           if(hasBeenCalled){
-               return "Cannot recall this function again";
+          
+           if(!hasBeenCalled){
+               hasBeenCalled = true;
+               return "this is the first time function is called.";
            }else{
-               return "this is the first time function is called."
+               return "cannot call this function again.";
            }
        }
        return inner;
