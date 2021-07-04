@@ -7,6 +7,7 @@ function modulePattern(){
     function inner(key, value){
          if(value !== undefined){
            result[key]= value;
+           console.log(result);
          }else{
              return result[key];
          }
@@ -15,8 +16,9 @@ function modulePattern(){
 }
 
 var set = modulePattern();
+var get = modulePattern();
 var setValue = set('city', "paris");
-var getValue = set(city);
+var getValue = get("city");
 
 console.log(setValue);
 console.log(getValue);
