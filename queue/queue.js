@@ -9,7 +9,7 @@ class Node {
 class Queue {
     constructor(){
         this.first = null;
-        this.last = value;
+        this.last = null;
         this.size = 0;
     }
     enqueue(value){
