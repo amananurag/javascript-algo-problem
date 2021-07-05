@@ -31,7 +31,7 @@ class Stack {
         var current = this.first;
         this.first = current.next;
         this.size--;
-        if(size ===0){
+        if(this.size ===0){
             this.first = null;
             this.last = null;
         }
