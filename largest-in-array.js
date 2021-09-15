@@ -4,7 +4,7 @@ e.g arr[2,6,44,34] Ans = 44
 */
 function largestFinder(arr){
     var max = arr[0];
-    for(let i=0; i < arr.length; i++){
+    for(let i=1; i < arr.length; i++){
         max = max > arr[i]?max:arr[i];
     }
      return max;
