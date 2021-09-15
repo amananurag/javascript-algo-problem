@@ -71,11 +71,13 @@ class Node{
            return this;
         }
         get(index){
-              if(index < 0 || index >= this.length){
+              if(index < 0 || index >this.length-1){
                     return null
               }else if(index === 0){
                     return this.head;
-              }else{
+              }else if(index === this.length-1){
+                  return this.tail;
+            }else{
                     var counter = 0;
                     var current = this.head;
                     while(counter !== index){
@@ -97,24 +99,19 @@ class Node{
         }
         insert(index, value){
               var node = new Node(value);
-              if(index < 0 && index >= this.length){
+              if(index < 0 && index >this.length-1){
                     return false;
               }else if(index === this.length-1){
                     this.push(node);
-                     this.length++;
-                     return this;
+                    return this;
               }else if(index === 0){
                     this.unshift(node);
-                    this.length++;
                     return this;
               }else{
                     var previous = this.get(index-1);
-                    var nextEle = this.get(index+1);
+                    var nextEle = this.get(index);
                     previous.next = node;
-                    if(!nextEle){
-                           node.next = nextEle;
-                    }
-                   
+                    node.next = nextEle;
                     this.length++;
                     return this;
               }
@@ -124,11 +121,11 @@ class Node{
                     return false;
               }else if(index === this.length-1){
                     this.pop();
-                     this.length--;
+                     
                      return this;
               }else if(index === 0){
                     this.shift();
-                    this.length--;
+                   
                     return this;
               }else{
                     var previous = this.get(index-1);
@@ -139,9 +136,11 @@ class Node{
               }
         }
   }
-  
+
   var a = new SinglyLinkedList();
-  a.push('hello');
-  
-  
-  console.log(a.insert(1,"here"));
+  a.push('a');
+  a.push('b');
+  a.push('d');
+  a.push('e');
+  a.insert(2,'c')
+  console.log(a);
