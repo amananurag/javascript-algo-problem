@@ -135,6 +135,7 @@ class Node{
                     return this;
               }
         }
+     
   }
 
   var a = new SinglyLinkedList();
@@ -142,5 +143,27 @@ class Node{
   a.push('b');
   a.push('d');
   a.push('e');
-  a.insert(2,'c')
+
   console.log(a);
+
+  var node = new Node(4);
+  node.next = new Node(5);
+  node.next.next = new Node(6);
+
+  console.log(node);
+console.log(reverse(node));
+
+  function reverse(head) {
+      let previous = null;
+      let next = null;
+    
+       while(head != null){
+             
+             next = head.next;
+             head.next = previous;
+             previous = head;
+             head = next;
+             
+       }
+       return previous;
+};
