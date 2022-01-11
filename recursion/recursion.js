@@ -29,3 +29,44 @@ function factorial(n){
 
 }
 console.log(factorial(5));
+/*
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+*/
+ function printPattern(n){
+     if(n == 0) return ;
+      printPattern(n-1);
+      var res = [];
+      for(var i=1; i<=n; i++){
+         res.push(i);
+       
+      }
+      console.log(...res);
+ }
+ printPattern(5);
+ /*
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+*/
+function printPatternDes(n){
+    if(n == 0) return ;
+  
+     var res = [];
+    
+     for(var i=1; i<=n; i++){
+        res.push(i);
+      
+     }
+     console.log(...res);
+     printPatternDes(n-1);
+   
+}
+printPatternDes(5)
+
+

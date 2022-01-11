@@ -20,7 +20,7 @@ class Stack {
         }else{
             var current = this.first;
             this.first = node;
-            this.first.node = current;
+            this.first.next = current;
             
         }
         this.size++;

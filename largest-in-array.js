@@ -10,4 +10,12 @@ function largestFinder(arr){
      return max;
 }
 console.log(largestFinder([2,6,44,35]));
-
+/**
+ * Duplicate Array Finder
+ */
+function duplicateFinder(arr){
+     return arr.filter((item, pos, arr) => {
+         return  arr.indexOf(item) == pos;
+    }) 
+}
+console.log(duplicateFinder([1,2,2,3,4,4]))

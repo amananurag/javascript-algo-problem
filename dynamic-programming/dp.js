@@ -47,3 +47,6 @@ Given is a func that needs to find the ways to reach to nth staircase only by ta
 
  //4
  //(1,1,1,1),(2,2),(3,1)(1,3),(1,2,1),(1,1,2),(2,1,1)
+
+
+ 
