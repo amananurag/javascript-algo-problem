@@ -4,7 +4,7 @@ function palindrome(str){
         if(str[i]!== str[str.length-1-i]){
             return "Not a palindrome";
         }else{
-            return "is a palindrome";
+            return "Ss a palindrome";
         }
     }
 }
