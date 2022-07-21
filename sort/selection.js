@@ -23,4 +23,4 @@ function selectionsort(arr){
    
     return arr;
   }
-  console.log(selectionsort([200,1,4,2,7,99,6,88,77]));
+  console.log(selectionsort([1,4,2,7,99,6,88,77]));
