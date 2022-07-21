@@ -8,10 +8,11 @@ function selectionsort(arr){
   {
      lowest = i;
     for(var j=i+0; j < arr.length; j++){
-      if(arr[j] < arr[lowest]){
-        var temp = arr[j];
-        arr[j] = arr[lowest];
-        arr[lowest] = temp;
+      if(arr[lowest] > arr[j]  ){
+        var temp = arr[lowest];
+        arr[lowest] = arr[j];
+        
+        arr[j] = temp;
        
       }
    
