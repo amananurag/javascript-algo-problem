@@ -7,11 +7,11 @@ function selectionsort(arr){
     for(var i= 0; i < arr.length; i++)
   {
      lowest = i;
-    for(var j=i+0; j < arr.length; j++){
+    for(var j=i+1; j < arr.length; j++){
       if(arr[lowest] > arr[j]  ){
         var temp = arr[lowest];
         arr[lowest] = arr[j];
-        
+
         arr[j] = temp;
        
       }
@@ -23,4 +23,4 @@ function selectionsort(arr){
    
     return arr;
   }
-  console.log(selectionsort([1,4,2,7,99,6,88,77]));
+  console.log(selectionsort([200,1,4,2,7,99,6,88,77]));
